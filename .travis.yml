@@ -1,0 +1,12 @@
+language: c
+sudo: required
+services:
+  - docker
+script:
+  - make lint
+  - make build-image
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push squarescale/contact;
+    fi
