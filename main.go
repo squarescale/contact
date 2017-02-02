@@ -21,7 +21,7 @@ func showBanner() {
 
 func showSqsc() {
 	data := [][]string{
-		[]string{"PaaS for your container based applications.\nFrom development workflow to production"},
+		[]string{"PaaS for your Cloud Native Applications.\nFrom Development Workflow to Production"},
 	}
 	table := tablewriter.NewWriter(os.Stdout)
 	table.SetHeader([]string{"SquareScale"})
